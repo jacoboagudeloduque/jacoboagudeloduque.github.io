@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Jacobo Agudelo Duque: Studienkolleg in Mettingen, Werkstatt, Hotel-IT und Robotik. Lebenslauf zum Durchklicken.">
+<meta property="og:title" content="Jacobo Agudelo Duque">
+<meta property="og:description" content="Mein Lebenslauf etwas anders, mit kleinen 3D-Räumen zu jeder Station.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jacoboagudeloduque.github.io/">
+<meta property="og:image" content="https://jacoboagudeloduque.github.io/img/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FF8A5B'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='white'%3EJA%3C/text%3E%3C/svg%3E">
+<title>Jacobo Agudelo Duque</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Caveat:wght@600;700&display=swap">
+<style>
+/* Layout: a walk through six sunlit low-poly rooms of Jacobo's life. Each section = one isometric 3D diorama (real window, sunlight on the floor) + a text panel styled after that room. Pastel section colours: light blue, peach, coral, orange, mint, lavender. Alternating sides on desktop, stacked on phones. */
+:root{
+  --ink:#1C2333; --muted:#59627A; --panel:#FFFFFF; --line:rgba(28,35,51,.13);
+  --hero:#D6ECFF; --hero-ac:#E8442E;
+  --hotel:#FFE3D1; --hotel-ac:#D9482B;
+  --shop:#DCEFFF; --shop-ac:#FF6B2C; --steel:#1D2B45;
+  --cafe:#DDF5E6; --cafe-ac:#1F8A4C; --board:#1F2E24; --chalk:#F6F2E8;
+  --school:#E4DDFF; --school-ac:#5038D9; --rule:rgba(80,56,217,.13);
+  --lab:#FFDCC2; --lab-ac:#C2410C; --term:#1D2B45; --term-fg:#D8F6EC;
+  --contact:#1D2B45; --contact-fg:#FFFFFF; --contact-btn:#FF8A5B; --contact-card:rgba(255,255,255,.08);
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --hand:"Caveat","Segoe Print",cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ink:#F1F4FA; --muted:#B4BCD0; --panel:#1E2536; --line:rgba(241,244,250,.15);
+  --hero:#14243A; --hero-ac:#FF8A6B; --hotel:#2E1C14; --hotel-ac:#FF9A7A;
+  --shop:#102033; --shop-ac:#FF9257; --steel:#0C1626;
+  --cafe:#10261A; --cafe-ac:#7FDCA2; --board:#1A261E;
+  --school:#1B1638; --school-ac:#AFA2FF; --rule:rgba(175,162,255,.14);
+  --lab:#2E1C10; --lab-ac:#FFA46B; --term:#0E1726;
+  --contact:#0E1726; --contact-card:rgba(255,255,255,.06); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#F1F4FA; --muted:#B4BCD0; --panel:#1E2536; --line:rgba(241,244,250,.15);
+  --hero:#14243A; --hero-ac:#FF8A6B; --hotel:#2E1C14; --hotel-ac:#FF9A7A;
+  --shop:#102033; --shop-ac:#FF9257; --steel:#0C1626;
+  --cafe:#10261A; --cafe-ac:#7FDCA2; --board:#1A261E;
+  --school:#1B1638; --school-ac:#AFA2FF; --rule:rgba(175,162,255,.14);
+  --lab:#2E1C10; --lab-ac:#FFA46B; --term:#0E1726;
+  --contact:#0E1726; --contact-card:rgba(255,255,255,.06); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--hero);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.08}
+p{margin:0}
+
+.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:56px}
+.inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center}
+.band.flip .stage,.band.flip .stagewrap{order:2}
+.stage{position:relative;aspect-ratio:5/4;max-width:100%;min-width:0}
+.stage canvas{width:100%;height:100%;display:block}
+.stagewrap{display:grid;grid-template-columns:minmax(110px,170px) minmax(0,1fr);gap:18px;align-items:center;min-width:0}
+.stagewrap.right{grid-template-columns:minmax(0,1fr) minmax(110px,170px)}
+.stagewrap.right .photos{order:2}
+.photos{display:grid;gap:20px;min-width:0}
+.inner .stagewrap .stage{order:1}
+.pol{position:relative;margin:0;background:#FFFFFF;padding:7px 7px 30px;border-radius:3px;box-shadow:0 12px 26px -12px rgba(20,30,50,.5);transform:rotate(-4deg)}
+.pol:nth-child(2){transform:rotate(4deg)}
+.pol img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:2px}
+.pol span{position:absolute;left:0;right:0;bottom:5px;text-align:center;font:700 19px var(--hand);color:#1C2333;line-height:1}
+@media (prefers-reduced-motion:no-preference){.pol{transition:transform .25s}.pol:hover{transform:rotate(0) scale(1.05);z-index:3}}
+@media (max-width:860px){
+  .stagewrap,.stagewrap.right{grid-template-columns:1fr}
+  .photos,.stagewrap.right .photos{order:2;grid-auto-flow:column;grid-auto-columns:minmax(120px,170px);justify-content:center}
+}
+.stage .tag{position:absolute;left:12px;bottom:10px;font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:var(--panel);color:var(--ink);box-shadow:0 2px 0 var(--line)}
+.text{display:grid;gap:18px;min-width:0}
+.eyebrow{font:600 13px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.band h2{font-size:clamp(32px,4.6vw,48px);font-weight:800}
+.lead{font-size:clamp(18px,2vw,21px);max-width:46ch}
+ul.clean{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+ul.clean li{display:grid;grid-template-columns:18px 1fr;gap:10px}
+ul.clean li::before{content:"";width:10px;height:10px;border-radius:3px;margin-top:9px;background:currentColor;opacity:.8}
+.stack{font:400 13px var(--mono);color:var(--muted)}
+.btn{font:700 17px var(--body);padding:13px 20px;border-radius:12px;border:2px solid var(--ink);background:var(--ink);color:var(--panel);text-decoration:none;cursor:pointer;box-shadow:0 4px 0 var(--line);display:inline-block}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.small{font-size:15px;padding:10px 16px}
+@media (prefers-reduced-motion:no-preference){.btn{transition:transform .15s}.btn:hover{transform:translateY(-2px)}}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+
+/* HERO */
+.hero{background:var(--hero)}
+.hero .hola{font:700 clamp(30px,4vw,42px) var(--hand);color:var(--hero-ac);line-height:1}
+.hero h1{font-size:clamp(46px,7.4vw,90px);font-weight:800;letter-spacing:-.02em}
+.hero .lead{font-size:clamp(20px,2.3vw,24px);line-height:1.45;max-width:30ch}
+.hero .lead strong{color:var(--hero-ac);font-weight:700}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:600 14px var(--body);padding:7px 13px;border-radius:999px;background:var(--panel);border:1px solid var(--line)}
+.route{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font:600 14px var(--mono);color:var(--muted)}
+.route i{flex:0 0 28px;border-top:2px dashed var(--hero-ac)}
+
+/* HOTEL */
+.hotel{background:var(--hotel)}
+.hotel .eyebrow{color:var(--hotel-ac)}
+.hotel ul.clean li::before{background:var(--hotel-ac)}
+.postcard{background:var(--panel);border-radius:10px;padding:24px;box-shadow:0 14px 34px -20px rgba(120,50,20,.55);display:grid;gap:16px;border:1px solid var(--line);position:relative}
+.postcard::after{content:"Jardín · Antioquia";position:absolute;top:16px;right:16px;font:600 11px var(--mono);letter-spacing:.08em;border:2px dashed var(--hotel-ac);color:var(--hotel-ac);padding:6px 8px;border-radius:4px;transform:rotate(4deg)}
+.postcard>p{padding-right:110px}
+.figs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.fig{display:grid;gap:2px}
+.fig b{font:800 clamp(30px,4vw,42px) var(--display);color:var(--hotel-ac);line-height:1}
+.fig span{font-size:14px;color:var(--muted);line-height:1.35}
+.hotel .btn{background:#003B95;border-color:#003B95;color:#FFFFFF}
+.hotel .btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+
+/* SHOP */
+.shop{background:var(--shop)}
+.shop .eyebrow{color:var(--shop-ac)}
+.jobcard{background:var(--panel);border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.jobcard .stripe{height:12px;background:repeating-linear-gradient(-45deg,var(--shop-ac) 0 14px,var(--steel) 14px 28px)}
+.jobcard .body{padding:22px;display:grid;gap:12px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font-size:16px;margin:0}
+.kv dt{font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding-top:4px}
+.kv dd{margin:0;font-weight:600}
+.helpbox{background:var(--steel);color:#F3F5FA;border-radius:10px;padding:22px;display:grid;gap:10px}
+.helpbox h3{font-size:22px}
+.helpbox .es{font:700 26px var(--hand);color:#FFB08A;line-height:1.2}
+
+/* CAFE */
+.cafe{background:var(--cafe)}
+.cafe .eyebrow{color:var(--cafe-ac)}
+.menuboard{background:var(--board);color:var(--chalk);border-radius:12px;padding:24px;border:8px solid #B07A4A;display:grid;gap:14px}
+.menuboard h3{font:700 34px var(--hand)}
+.menu{display:grid;gap:10px}
+.menu div{display:flex;gap:10px;align-items:baseline}
+.menu span:first-child{font-weight:600}
+.menu i{flex:1;border-bottom:2px dotted rgba(246,242,232,.35);transform:translateY(-4px);min-width:12px}
+.menu span:last-child{font:600 14px var(--mono);color:#FFD66B;white-space:nowrap}
+
+/* SCHOOL */
+.school{background:var(--school)}
+.school .eyebrow{color:var(--school-ac)}
+.notebook{background:var(--panel);border-radius:8px;padding:22px 22px 22px 48px;border:1px solid var(--line);background-image:linear-gradient(var(--rule) 1px,transparent 1px);background-size:100% 32px;background-position:0 14px;position:relative;display:grid;gap:14px}
+.notebook::before{content:"";position:absolute;left:32px;top:0;bottom:0;border-left:2px solid #F0506E;opacity:.7}
+.entry h3{font-size:21px}
+.entry .when{font:600 13px var(--mono);color:var(--school-ac)}
+.langs{display:grid;gap:10px}
+.lang{display:grid;grid-template-columns:96px 1fr 110px;gap:12px;align-items:center;font-weight:600}
+.lvls{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.lvls i{height:12px;border-radius:3px;background:var(--rule)}
+.lvls i.on{background:var(--school-ac)}
+.lang small{font:600 13px var(--mono);color:var(--muted)}
+
+/* LAB */
+.lab{background:var(--lab)}
+.lab .eyebrow{color:var(--lab-ac)}
+.medal{display:flex;gap:16px;align-items:center;background:var(--panel);border-radius:14px;padding:18px;border:1px solid var(--line)}
+.medal .disc{flex:none;width:72px;height:72px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFF1A8,#F2B705 55%,#B88300);display:grid;place-items:center;font:800 34px var(--display);color:#6B4A00;box-shadow:inset 0 -4px 0 rgba(0,0,0,.15)}
+.medal h3{font-size:22px}
+.terminal{background:var(--term);color:var(--term-fg);border-radius:12px;font:400 14.5px/1.7 var(--mono);overflow:hidden}
+.terminal .bar{display:flex;gap:6px;padding:10px 14px;background:rgba(255,255,255,.06)}
+.terminal .bar i{width:11px;height:11px;border-radius:50%;background:#FF6B5B}
+.terminal .bar i:nth-child(2){background:#FFC94D}.terminal .bar i:nth-child(3){background:#5DDB75}
+.terminal pre{margin:0;padding:16px 18px;white-space:pre-wrap;word-break:break-word}
+.terminal .c{color:#8FB0D4}.terminal .k{color:#FFC94D}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.pcard{background:var(--panel);border-radius:12px;padding:16px;border:1px solid var(--line);display:grid;gap:6px;align-content:start}
+.pcard h3{font-size:19px}
+.pcard p{font-size:16px}
+
+/* CONTACT */
+.contact{background:var(--contact);color:var(--contact-fg)}
+.contact .inner{grid-template-columns:1fr 1fr;align-items:start}
+.contact .hola{font:700 clamp(30px,4vw,40px) var(--hand);color:var(--contact-btn);line-height:1}
+.contact h2{font-size:clamp(34px,5vw,54px)}
+.contact .lead{color:rgba(255,255,255,.86)}
+.cgrid{display:grid;gap:12px}
+.citem{background:var(--contact-card);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:16px 18px;display:grid;gap:4px}
+.citem small{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.citem .val{font:600 clamp(16px,2.6vw,21px) var(--body);word-break:break-word}
+.mail{font-family:var(--mono);user-select:all;word-break:break-all}
+.contact .btn{background:var(--contact-btn);border-color:var(--contact-btn);color:#1D2B45;box-shadow:none}
+.contact .btn.ghost{background:transparent;color:#FFFFFF;border-color:rgba(255,255,255,.6)}
+#copied{font:600 15px var(--mono);min-height:1.4em;color:var(--contact-btn)}
+footer{font:400 13px var(--mono);color:rgba(255,255,255,.6);grid-column:1/-1}
+
+@media (max-width:860px){
+  .inner,.contact .inner{grid-template-columns:1fr;gap:22px}
+  .band.flip .stage,.band.flip .stagewrap{order:0}
+  .band{padding-block:40px}
+}
+@media (max-width:480px){
+  .figs{gap:8px}
+  .cards{grid-template-columns:1fr}
+  .lang{grid-template-columns:82px 1fr}
+  .lang small{grid-column:2}
+  .postcard>p{padding-right:0;padding-top:28px}
+}
+</style>
+</head>
+<body>
+
+
+<!-- HERO -->
+<section class="band hero" id="start">
+  <div class="inner">
+    <div class="stagewrap"><div class="photos"><figure class="pol"><img src="img/hamburg.jpg" alt="Jacobo lächelnd im Hamburger Hauptbahnhof"><span>Hamburg Hbf</span></figure><figure class="pol"><img src="img/drums.jpg" alt="Jacobo mit Drumsticks am Schlagzeug"><span>Am Schlagzeug</span></figure></div><div class="stage"><canvas id="c-hero" aria-label="3D-Diorama: sonniges Zimmer mit Gaming-PC, Simracing-Lenkrad, E-Drums und Blumen" role="img"></canvas><span class="tag">Mein Zimmer</span></div></div>
+    <div class="text">
+      <div class="hola">¡Hola! Ich bin</div>
+      <h1>Jacobo Agudelo Duque</h1>
+      <p class="lead">Ein junger Mensch voller Energie und mit echter Lust zu helfen. Ich stürze mich in Projekte, die mich herausfordern – am liebsten dort, wo <strong>Technik</strong> und <strong>Mobilität</strong> zusammenkommen.</p>
+      <div class="route"><span>20 Jahre</span><i></i><span>aus Medellín</span><i></i><span>lebt in Osnabrück</span></div>
+      <div class="facts"><span class="chip">Spanisch · Englisch C1 · Deutsch B2</span><span class="chip">Pünktlich & hilfsbereit</span><span class="chip">Offen für Werkstudent- & Minijobs</span></div>
+      <div class="cta"><a class="btn" href="#kontakt">Sag Hallo</a><a class="btn ghost" href="#hotel">Rundgang starten</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOTEL -->
+<section class="band hotel flip" id="hotel">
+  <div class="inner">
+    <div class="stage"><canvas id="c-hotel" aria-label="3D-Diorama: Zimmer im Stil von Jardín mit Bergen und Kaffeefeldern im Hintergrund" role="img"></canvas><span class="tag">Casa Duque</span></div>
+    <div class="text">
+      <div class="eyebrow">Projekt · laufend</div>
+      <h2>Ein Hotel, das sich fast selbst verwaltet</h2>
+      <div class="postcard">
+        <p>Casa Duque ist ein kleines Hotel meiner Familie in Jardín, einem der buntesten Kaffeedörfer Kolumbiens. Die komplette digitale Infrastruktur habe ich aufgebaut und betreue sie aus Deutschland.</p>
+        <div class="figs">
+          <div class="fig"><b>4</b><span>Zimmer, Top-Bewertungen</span></div>
+          <div class="fig"><b>5</b><span>Buchungskanäle synchron</span></div>
+          <div class="fig"><b>8–9 h</b><span>pro Woche gespart</span></div>
+        </div>
+        <ul class="clean">
+          <li>Channel-Management in Beds24: Booking.com, Airbnb, Expedia, Google Hotel Ads, Google Vacation Rentals</li>
+          <li>Schluss mit Überbuchungen und Stress mit mehreren Plattformen</li>
+          <li>Eigene Direktbuchungsseite ohne Provision</li>
+          <li>Automatische Berichte (Cloudflare Worker) und ein Telegram-Bot für das Team vor Ort</li>
+        </ul>
+        <div class="cta">
+          <a class="btn small" href="https://www.booking.com/hotel/co/casa-duque-jardin.de.html" target="_blank" rel="noopener">Auf Booking.com ansehen</a>
+          <a class="btn small ghost" href="https://www.expedia.co.in/Jardin-Hotels-Casa-Duque-Jardin.h133402400.Hotel-Information" target="_blank" rel="noopener">Expedia</a>
+        </div>
+        <div class="stack">Beds24 · Cloudflare Workers · Webhooks · Telegram Bot API</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="band shop" id="werkstatt">
+  <div class="inner">
+    <div class="stagewrap"><div class="photos"><figure class="pol"><img src="img/porsche-motor.jpg" alt="Jacobo neben einem Schnittmodell eines Porsche-Motors"><span>Porsche-Museum</span></figure><figure class="pol"><img src="img/nuerburgring.jpg" alt="Jacobo mit ausgebreiteten Armen vor dem Nürburgring"><span>Nürburgring</span></figure></div><div class="stage"><canvas id="c-shop" aria-label="3D-Diorama: helle Werkstatt mit Elektroauto auf der Hebebühne und Motor" role="img"></canvas><span class="tag">Werkstatt</span></div></div>
+    <div class="text">
+      <div class="eyebrow">Erfahrung · Fahrzeugtechnik</div>
+      <h2>Autos sind meine Leidenschaft</h2>
+      <div class="jobcard">
+        <div class="stripe"></div>
+        <div class="body">
+          <dl class="kv">
+            <dt>Position</dt><dd>Mechaniker-Helfer</dd>
+            <dt>Betrieb</dt><dd>Military Car Service Dom, Stuttgart</dd>
+            <dt>Zeitraum</dt><dd>05/2025 – 01/2026</dd>
+          </dl>
+          <p>Unterstützung bei Wartung und Reparatur im Werkstattalltag. Dazu eigene Recherche zu E-Autos: Ladesysteme von BYD und Tesla, Teileidentifikation per VIN und Ersatzteilkatalog.</p>
+        </div>
+      </div>
+      <div class="helpbox">
+        <h3>Sprachhilfe beim Autokauf</h3>
+        <p>Du möchtest in Deutschland ein Auto kaufen, sprichst aber kein Deutsch? Ich übersetze, schreibe und telefoniere mit dem Verkäufer und begleite dich zur Besichtigung.</p>
+        <p class="es">¿Quieres comprar un auto en Alemania y no hablas alemán? Hablo con el vendedor por ti y te acompaño.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAFE -->
+<section class="band cafe flip" id="gastro">
+  <div class="inner">
+    <div class="stage"><canvas id="c-cafe" aria-label="3D-Diorama: sonniges Restaurant mit Theke, Kaffeemaschine und Blumen" role="img"></canvas><span class="tag">Gastronomie</span></div>
+    <div class="text">
+      <div class="eyebrow">Erfahrung · Kundenkontakt</div>
+      <h2>Ich arbeite gern mit Menschen</h2>
+      <p class="lead">Gastronomie macht mir Spaß: Ich bleibe freundlich, wenn das Haus voll ist, und für mich ist Pünktlichkeit selbstverständlich.</p>
+      <div class="menuboard">
+        <h3>Heute auf der Karte</h3>
+        <div class="menu">
+          <div><span>Service im El Hidalgo, Tapas-Bar</span><i></i><span>seit 2026</span></div>
+          <div><span>Service und Küche im Schlaraffenland</span><i></i><span>Sommer 2026</span></div>
+          <div><span>Service im El Bodegón de Sachi</span><i></i><span>2023/24</span></div>
+          <div><span>Belehrung §§ 42/43 IfSG</span><i></i><span>Zertifikat</span></div>
+          <div><span>Kundenservice & Gästebetreuung</span><i></i><span>täglich</span></div>
+          <div><span>Pünktlich, hilfsbereit, belastbar</span><i></i><span>immer</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHOOL -->
+<section class="band school" id="bildung">
+  <div class="inner">
+    <div class="stage"><canvas id="c-school" aria-label="3D-Diorama: Lernzimmer mit Tafel zur Feststellungsprüfung, Fenster und Globus" role="img"></canvas><span class="tag">Studienkolleg</span></div>
+    <div class="text">
+      <div class="eyebrow">Bildung · Sprachen</div>
+      <h2>Auf dem Weg ins Studium</h2>
+      <div class="notebook">
+        <div class="entry"><div class="when">seit 2026</div><h3>Studienkolleg – Comenius-Kolleg Mettingen</h3><p>Vorbereitung auf die Feststellungsprüfung mit Mathematik, Physik, Chemie und Deutsch.</p></div>
+        <div class="entry"><div class="when">Stuttgart</div><h3>Deutsch-Intensivkurs</h3><p>Sprachschule, Niveau B2.</p></div>
+        <div class="entry"><div class="when">Abschluss 2024</div><h3>Bachillerato – Colegio Canadiense</h3><p>Schulabschluss in La Estrella (Antioquia, Kolumbien).</p></div>
+        <div class="langs">
+          <div class="lang"><span>Spanisch</span><span class="lvls"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><small>Muttersprache</small></div>
+          <div class="lang"><span>Englisch</span><span class="lvls"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><small>C1</small></div>
+          <div class="lang"><span>Deutsch</span><span class="lvls"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><small>B2</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAB -->
+<section class="band lab flip" id="robotik">
+  <div class="inner">
+    <div class="stagewrap right"><div class="photos"><figure class="pol"><img src="img/pc.jpg" alt="Blick in Jacobos Gaming-PC mit Radeon-Grafikkarte"><span>Mein PC</span></figure></div><div class="stage"><canvas id="c-lab" aria-label="3D-Diorama: Robotik-Arena mit Siegerpodest, Roboter, Goldmedaille und Konfetti" role="img"></canvas><span class="tag">IYRC 2023</span></div></div>
+    <div class="text">
+      <div class="eyebrow">Robotik · IT · eigene Projekte</div>
+      <h2>Gold bei der Robotik-Weltmeisterschaft für Jugendliche</h2>
+      <div class="medal"><div class="disc">1</div><div><h3>1. Platz – IYRC 2023</h3><p>International Youth Robot Competition: Roboter gebaut, programmiert und im Wettbewerb gewonnen.</p></div></div>
+      <div class="terminal" aria-label="Weitere Projekte">
+        <div class="bar"><i></i><i></i><i></i></div>
+<pre><span class="c"># weitere projekte</span>
+<span class="k">Lohnanalyse</span>   Zeiterfassung → Normal- & Überstunden, automatisch
+<span class="k">KlarFahrt</span>     eigener Onlineshop für Autozubehör (Shopify)
+<span class="k">IT-Support</span>    PCs, Software, Hardware – schnelle Hilfe</pre>
+      </div>
+      <div class="cards">
+        <div class="pcard"><h3>Lohnauswertung</h3><p>Web-App, die Zeiterfassungen einliest und Stunden nach Regeln berechnet.</p><div class="stack">Base44</div></div>
+        <div class="pcard"><h3>KlarFahrt</h3><p>Markenauftritt, Domain, Shop und Produktbeschaffung – alles selbst aufgebaut.</p><div class="stack">Shopify · Canva</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="band contact" id="kontakt">
+  <div class="inner">
+    <div class="text">
+      <div class="hola">Lust auf einen Kaffee?</div>
+      <h2>Schreib mir einfach.</h2>
+      <p class="lead">Ich freue mich über jede Nachricht – ob Jobangebot, Projektidee oder einfach eine Frage. Ich antworte schnell, auf Deutsch, Englisch oder Spanisch.</p>
+      <div class="cta"><button class="btn" id="copy" type="button">E-Mail kopieren</button><a class="btn ghost" href="https://wa.me/491627078100" target="_blank" rel="noopener">WhatsApp</a><a class="btn ghost" href="https://www.linkedin.com/in/jacoboagudelod/" target="_blank" rel="noopener">LinkedIn</a></div>
+      <div id="copied" aria-live="polite"></div>
+    </div>
+    <div class="cgrid">
+      <div class="citem"><small>E-Mail</small><span class="val mail" id="mail">jacoboagudeloduque@gmail.com</span></div>
+      <div class="citem"><small>Telefon &amp; WhatsApp</small><span class="val mail">+49 162 7078100</span></div>
+      <div class="citem"><small>Ort</small><span class="val">Osnabrück · Studienkolleg in Mettingen</span></div>
+      <div class="citem"><small>Ich suche</small><span class="val">Werkstudent- oder Minijob in IT, E-Commerce, Hotellerie oder Kfz</span></div>
+      <div class="citem"><small>Sprachen</small><span class="val">Spanisch · Englisch · Deutsch</span></div>
+      <div class="citem"><small>LinkedIn</small><a class="val" href="https://www.linkedin.com/in/jacoboagudelod/" target="_blank" rel="noopener" style="color:inherit">in/jacoboagudelod</a></div>
+    </div>
+    <footer>Jacobo Agudelo Duque · Stand Oktober 2026</footer>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var t=document.getElementById('mail').textContent,o=document.getElementById('copied');
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);o.textContent='Markiert – mit Strg/Cmd+C kopieren';}
+  try{navigator.clipboard.writeText(t).then(function(){o.textContent='Kopiert – bis gleich!';},sel);}catch(e){sel();}
+});
+
+(function(){
+  if(!window.THREE) return;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var PI=Math.PI, all=[];
+  var DISP='"Bricolage Grotesque", "Segoe UI", sans-serif', HAND='Caveat, "Segoe Print", cursive', MONO='"JetBrains Mono", Menlo, monospace';
+  var seed=7;function rnd(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646;}
+
+  function mat(c,o){return new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:.75,metalness:0,flatShading:true},o||{}));}
+  function glow(c,i){return mat(c,{emissive:c,emissiveIntensity:i==null?.8:i,roughness:.4});}
+  function M(c){return (c && (c.isMaterial||Array.isArray(c)))?c:mat(c);}
+  function add(g,geo,m,x,y,z){var me=new THREE.Mesh(geo,M(m));me.position.set(x,y,z);me.castShadow=true;me.receiveShadow=true;g.add(me);return me;}
+  function box(g,w,h,d,c,x,y,z){return add(g,new THREE.BoxGeometry(w,h,d),c,x,y+h/2,z);}
+  function cyl(g,rt,rb,h,c,x,y,z,s){return add(g,new THREE.CylinderGeometry(rt,rb,h,s||20),c,x,y+h/2,z);}
+  function sph(g,r,c,x,y,z){return add(g,new THREE.IcosahedronGeometry(r,1),c,x,y,z);}
+  function canvasTex(w,h,draw){var c=document.createElement('canvas');c.width=w;c.height=h;draw(c.getContext('2d'),w,h);var t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=4;return t;}
+  function tex(w,h,draw,lit){var t=canvasTex(w,h,draw);
+    return new THREE.MeshStandardMaterial({map:t,roughness:.7,emissive:lit?'#FFFFFF':'#000000',emissiveMap:lit?t:null,emissiveIntensity:lit?(typeof lit==='number'?lit:.6):0});}
+  function plane(g,w,h,m,x,y,z,ry){var p=new THREE.Mesh(new THREE.PlaneGeometry(w,h),m);p.position.set(x,y,z);if(ry)p.rotation.y=ry;p.receiveShadow=true;g.add(p);return p;}
+  function onBack(g,w,h,m,x,y){return plane(g,w,h,m,x,y,-4.69);}
+  function onLeft(g,w,h,m,z,y){return plane(g,w,h,m,-4.69,y,z,PI/2);}
+  function label(text,o){o=o||{};return tex(o.w||512,o.h||128,function(x,w,h){
+      x.fillStyle=o.bg||'#FFFFFF';x.fillRect(0,0,w,h);x.fillStyle=o.fg||'#1C2333';
+      x.font=o.font||('800 '+Math.round(h*.5)+'px '+DISP);x.textAlign='center';x.textBaseline='middle';x.fillText(text,w/2,h/2+(o.dy||0));},o.lit);}
+  function sky(x,w,h,extra){var gr=x.createLinearGradient(0,0,0,h);gr.addColorStop(0,'#8ED0FF');gr.addColorStop(1,'#E6F6FF');x.fillStyle=gr;x.fillRect(0,0,w,h);
+    x.fillStyle='rgba(255,255,255,.9)';[[.2,.18],[.65,.12],[.85,.3]].forEach(function(c){x.beginPath();x.arc(w*c[0],h*c[1],26,0,7);x.arc(w*c[0]+30,h*c[1]+6,22,0,7);x.arc(w*c[0]-28,h*c[1]+8,18,0,7);x.fill();});
+    x.fillStyle='#A9D99B';x.beginPath();x.moveTo(0,h*.72);x.quadraticCurveTo(w*.3,h*.5,w*.55,h*.7);x.quadraticCurveTo(w*.8,h*.55,w,h*.68);x.lineTo(w,h);x.lineTo(0,h);x.fill();
+    x.fillStyle='#7CC173';x.beginPath();x.moveTo(0,h*.86);x.quadraticCurveTo(w*.5,h*.7,w,h*.84);x.lineTo(w,h);x.lineTo(0,h);x.fill();if(extra)extra(x,w,h);}
+
+  /* room with a real window opening in the left wall so sunlight falls inside */
+  function room(g,o){
+    var a=o.back,b=o.left,f=o.floor,t=o.trim,zc=o.wz,ww=o.ww||2.8,yb=1.3,wh=2.7;
+    box(g,10.4,.4,10.4,f,0,-.4,0);
+    box(g,10.4,6,.4,a,0,0,-5);
+    box(g,.4,yb,10.4,b,-5,0,0); box(g,.4,6-yb-wh,10.4,b,-5,yb+wh,0);
+    var L1=zc-ww/2+5.2; box(g,.4,wh,L1,b,-5,yb,-5.2+L1/2);
+    var L2=5.2-(zc+ww/2); box(g,.4,wh,L2,b,-5,yb,zc+ww/2+L2/2);
+    var fr=o.frame||'#FFFFFF';
+    box(g,.5,.12,ww+.3,fr,-4.9,yb-.12,zc); box(g,.5,.12,ww+.3,fr,-4.9,yb+wh,zc);
+    box(g,.5,wh,.12,fr,-4.9,yb,zc-ww/2-.06); box(g,.5,wh,.12,fr,-4.9,yb,zc+ww/2+.06);
+    var mu=box(g,.1,wh,.08,fr,-4.9,yb,zc); var tr=box(g,.1,.08,ww,fr,-4.9,yb+wh*.62,zc);
+    box(g,.7,.1,ww+.5,fr,-4.55,yb-.1,zc);
+    box(g,10,.3,.1,t,.2,0,-4.75); box(g,.1,.3,L1-.2,t,-4.75,0,-5+L1/2); box(g,.1,.3,L2-.2,t,-4.75,0,zc+ww/2+L2/2-.1);
+    var bd=plane(g,ww+1.4,wh+1.4,new THREE.MeshBasicMaterial({map:canvasTex(512,400,o.view||function(x,w,h){sky(x,w,h);})}),-5.8,yb+wh/2-.45,zc-.55,PI/2);
+    var glass=new THREE.Mesh(new THREE.PlaneGeometry(ww,wh),new THREE.MeshStandardMaterial({color:'#DFF3FF',transparent:true,opacity:.12,roughness:.05}));glass.position.set(-4.95,yb+wh/2,zc);glass.rotation.y=PI/2;g.add(glass);
+    return {zc:zc,yb:yb,wh:wh};
+  }
+  function rug(g,x,z,r,c){cyl(g,r,r,.04,c,x,0,z,32);}
+  function legs(g,w,d,h,c,x,z){[[1,1],[1,-1],[-1,1],[-1,-1]].forEach(function(p){box(g,.12,h,.12,c,x+p[0]*(w/2-.15),0,z+p[1]*(d/2-.15));});}
+  function flowers(g,x,y,z,petal,pot,s){s=s||1;var heads=[];cyl(g,.36*s,.28*s,.55*s,pot||'#F4A98A',x,y,z,16);cyl(g,.32*s,.32*s,.04,'#6B4423',x,y+.55*s,z,16);
+    for(var i=0;i<5;i++){var a=i*1.26+rnd()*.4,r=.16*s,h=(.6+rnd()*.5)*s,sx=x+Math.cos(a)*r,sz=z+Math.sin(a)*r;
+      var st=cyl(g,.02*s,.025*s,h,'#3E9E4A',sx,y+.55*s,sz,6);st.castShadow=false;
+      var lf=sph(g,.12*s,'#5BBF5E',sx+Math.cos(a)*.1*s,y+.55*s+h*.45,sz+Math.sin(a)*.1*s);lf.scale.set(1.4,.35,.8);
+      var hd=new THREE.Group();hd.position.set(sx,y+.55*s+h,sz);g.add(hd);heads.push(hd);
+      add(hd,new THREE.IcosahedronGeometry(.06*s,0),'#FFD23F',0,0,0);
+      for(var p=0;p<6;p++){var pe=add(hd,new THREE.IcosahedronGeometry(.08*s,0),petal,Math.cos(p*1.05)*.1*s,0,Math.sin(p*1.05)*.1*s);pe.scale.set(1,.45,1);}}
+    return heads;}
+  function bigPlant(g,x,y,z,s,pot){s=s||1;var lv=[];cyl(g,.45*s,.36*s,.7*s,pot||'#FFFFFF',x,y,z,16);
+    for(var i=0;i<8;i++){var a=i*.785+rnd()*.3,h=(.9+rnd()*.9)*s;var st=cyl(g,.025*s,.03*s,h,'#2F8A3E',x+Math.cos(a)*.08,y+.7*s,z+Math.sin(a)*.08,6);st.castShadow=false;
+      var leaf=add(g,new THREE.SphereGeometry(.34*s,10,6),i%2?'#3FAE55':'#58C46A',x+Math.cos(a)*.42*s,y+.7*s+h,z+Math.sin(a)*.42*s);leaf.scale.set(1.25,.12,.75);leaf.rotation.y=-a;leaf.rotation.z=.35;lv.push(leaf);}
+    return lv;}
+
+  function make(id,build,opt){
+    opt=opt||{};var canvas=document.getElementById(id); if(!canvas) return;
+    var r; try{r=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true});}catch(e){return;}
+    r.setPixelRatio(Math.min(2,window.devicePixelRatio||1));
+    r.shadowMap.enabled=true; r.shadowMap.type=THREE.PCFSoftShadowMap; r.outputEncoding=THREE.sRGBEncoding;
+    r.toneMapping=THREE.ACESFilmicToneMapping; r.toneMappingExposure=1.15;
+    var s=new THREE.Scene();
+    var look=opt.look||1.8, F=opt.f||6.8;
+    var cam=new THREE.OrthographicCamera(-1,1,1,-1,.1,100); cam.position.set(14,11.5+look,14); cam.lookAt(0,look,0);
+    s.add(new THREE.HemisphereLight('#FFFFFF','#B8A48C',.75));
+    var key=new THREE.DirectionalLight('#FFFFFF',.45); key.position.set(10,14,10); s.add(key);
+    var sun=new THREE.DirectionalLight('#FFE6B8',1.6); var wz=opt.wz||0;
+    sun.position.set(-16,13,wz+5); sun.target.position.set(0,0,wz-1); s.add(sun.target);
+    sun.castShadow=true; sun.shadow.mapSize.set(2048,2048);
+    var sc=sun.shadow.camera; sc.left=-12;sc.right=12;sc.top=12;sc.bottom=-12;sc.near=1;sc.far=60; sun.shadow.bias=-.0006; s.add(sun);
+    var fill=new THREE.PointLight('#FFF4E0',.35,30); fill.position.set(2,5,2); s.add(fill);
+    var g=new THREE.Group(); s.add(g);
+    var tick=build(g)||function(){};
+    var o={r:r,s:s,cam:cam,g:g,tick:tick,vis:true};
+    function size(){var w=canvas.clientWidth,h=canvas.clientHeight; if(!w||!h) return; r.setSize(w,h,false);
+      var a=w/h,f=F; if(a<1.1) f=F*1.1/a; cam.left=-f*a;cam.right=f*a;cam.top=f;cam.bottom=-f;cam.updateProjectionMatrix();o.tick(0);r.render(s,cam);}
+    size(); if(window.ResizeObserver) new ResizeObserver(size).observe(canvas); else addEventListener('resize',size);
+    if(window.IntersectionObserver) new IntersectionObserver(function(e){o.vis=e[0].isIntersecting;}).observe(canvas);
+    all.push(o);
+  }
+
+  function start(){
+  /* 1 HERO: sunny room — PC, sim-racing wheel, e-drums, Colombian flag, flowers */
+  make('c-hero',function(g){
+    room(g,{back:'#BFE0FF',left:'#FFD5C4',floor:'#D9A26B',trim:'#FFFFFF',wz:1.4});
+    rug(g,.6,.8,2.9,'#FF9A7A');
+    onLeft(g,1.6,1.05,tex(300,200,function(x,w,h){x.fillStyle='#FCD116';x.fillRect(0,0,w,h/2);x.fillStyle='#003893';x.fillRect(0,h/2,w,h/4);x.fillStyle='#CE1126';x.fillRect(0,h*.75,w,h/4);}),-2.8,3.4);
+    onBack(g,1.6,1.1,label('Medellín → Osnabrück',{w:520,h:360,bg:'#FFFFFF',fg:'#E8442E',font:'700 66px '+HAND}),3.4,4);
+    box(g,4.4,.15,1.8,'#FFFFFF',-1.1,1.55,-3.9); legs(g,4.4,1.8,1.55,'#C9D6E6',-1.1,-3.9);
+    box(g,.12,.5,.12,'#2B2B2B',-2.3,1.7,-4.4);box(g,1.8,1.1,.1,'#1B2230',-2.3,2.15,-4.42);
+    plane(g,1.64,.94,tex(512,300,function(x,w,h){x.fillStyle='#EEF6FF';x.fillRect(0,0,w,h);x.fillStyle='#1D2B45';x.font='700 30px '+DISP;x.fillText('Casa Duque · Beds24',18,42);
+      ['#3D7DFF','#FF6B6B','#FFB547','#3CC48A'].forEach(function(c,i){x.fillStyle='#DCE7F5';x.fillRect(18,70+i*52,w-36,34);x.fillStyle=c;x.fillRect(18,70+i*52,(w-36)*(.55+i*.1),34);x.fillStyle='#FFFFFF';x.font='600 20px '+MONO;x.fillText('Zimmer '+(i+1),28,94+i*52);});},.5),-2.3,2.7,-4.36);
+    box(g,.12,.5,.12,'#2B2B2B',-.4,1.7,-4.4);box(g,1.8,1.1,.1,'#1B2230',-.4,2.15,-4.42);
+    var msgs=['Neue Buchung · Booking.com','Check-in 15:00 · Zimmer 2','Bericht: Woche komplett'];
+    plane(g,1.64,.94,tex(512,300,function(x,w,h){x.fillStyle='#F3F7FB';x.fillRect(0,0,w,h);x.fillStyle='#2AABEE';x.fillRect(0,0,w,46);x.fillStyle='#FFFFFF';x.font='700 24px '+DISP;x.fillText('@casaduque_bot',16,32);
+      msgs.forEach(function(b,i){x.fillStyle=i%2?'#D7F0FF':'#FFFFFF';var y=66+i*76;x.fillRect(16,y,w-60,58);x.fillStyle='#1D2B45';x.font='500 22px '+DISP;x.fillText(b,32,y+36);});},.5),-.4,2.7,-4.36);
+    var wheel=new THREE.Mesh(new THREE.TorusGeometry(.4,.08,10,28),mat('#1B1B1B'));wheel.position.set(.95,2.05,-3.3);wheel.castShadow=true;g.add(wheel);
+    var hub=new THREE.Mesh(new THREE.CylinderGeometry(.12,.12,.1,12),mat('#E8442E'));hub.rotation.x=PI/2;hub.position.set(.95,2.05,-3.3);g.add(hub);
+    box(g,.45,.35,.5,'#2B2B2B',.95,1.7,-3.65);
+    var pc=new THREE.Group();g.add(pc);pc.position.set(1.85,1.7,-4.2);box(pc,.6,1.1,1,'#1B2230',0,0,0);
+    var rgb=box(pc,.02,.9,.8,glow('#FF2D2D',1),.31,.1,0);
+    var chair=new THREE.Group();g.add(chair);chair.position.set(-1.3,0,-2.1);
+    cyl(chair,.08,.08,.9,'#333',0,0,0,10);box(chair,1.1,.2,1.1,'#FF7A59',0,.9,0);box(chair,1.1,1.5,.2,'#FF7A59',0,1.1,.5);
+    var drums=new THREE.Group();g.add(drums);drums.position.set(2.6,0,1.6);
+    box(drums,.1,1.5,.1,'#9AA0A6',-.6,0,-.5);box(drums,.1,1.5,.1,'#9AA0A6',.6,0,-.5);box(drums,1.4,.08,.08,'#9AA0A6',0,1.4,-.5);
+    var pads=[];[[-.55,1.55,-.35,.32],[0,1.62,-.5,.28],[.55,1.55,-.35,.32],[-.75,1.15,.15,.34],[.75,1.25,.1,.36]].forEach(function(p){
+      pads.push(cyl(drums,p[3],p[3],.07,mat('#1B1B1B',{emissive:'#4FC3FF',emissiveIntensity:0}),p[0],p[1],p[2],18));});
+    var kick=new THREE.Mesh(new THREE.CylinderGeometry(.45,.45,.3,20),mat('#1B1B1B'));kick.rotation.x=PI/2;kick.position.set(0,.45,-.2);kick.castShadow=true;drums.add(kick);
+    plane(drums,.5,.25,label('YAMAHA',{w:256,h:128,bg:'#1B1B1B',fg:'#FFFFFF',font:'800 56px '+DISP}),0,.47,-.04);
+    cyl(drums,.28,.28,.1,'#FF7A59',0,.8,.9,14);cyl(drums,.05,.05,.8,'#9AA0A6',0,0,.9,6);
+    var fl1=flowers(g,-4.4,1.3,.4,'#FF7AA2','#FFFFFF',.8);var fl2=flowers(g,-4.4,1.3,2.5,'#FFB547','#BFE0FF',.8);
+    var lv=bigPlant(g,4,0,-4,1.2,'#FFFFFF');
+    return function(t){wheel.rotation.z=Math.sin(t*1.4)*.7;hub.rotation.z=wheel.rotation.z;chair.rotation.y=Math.sin(t*.5)*.25;
+      var beat=Math.floor(t*3.2)%pads.length;pads.forEach(function(p,k){p.material.emissiveIntensity=k===beat?.9:0;});
+      rgb.material.color.setHSL((t*.08)%1,1,.5);rgb.material.emissive.setHSL((t*.08)%1,1,.5);
+      fl1.concat(fl2).forEach(function(h,k){h.rotation.z=Math.sin(t*1.3+k)*.08;});lv.forEach(function(l,k){l.rotation.x=Math.sin(t*1.1+k)*.05;});
+      g.rotation.y=Math.sin(t*.25)*.035;};
+  },{wz:1.4});
+
+  /* 2 HOTEL: Casa Duque in Jardín — painted doors, mountains and coffee outside */
+  make('c-hotel',function(g){
+    room(g,{back:'#FFFAF2',left:'#FFF3E4',floor:'#C9774A',trim:'#38B2AC',frame:'#38B2AC',wz:1.6,ww:3,view:function(x,w,h){sky(x,w,h,function(x,w,h){
+      x.fillStyle='#2E8B3E';x.beginPath();x.moveTo(0,h*.6);x.lineTo(w*.2,h*.32);x.lineTo(w*.42,h*.58);x.lineTo(w*.66,h*.26);x.lineTo(w,h*.56);x.lineTo(w,h);x.lineTo(0,h);x.fill();
+      x.fillStyle='#FFFFFF';x.fillRect(w*.48,h*.48,34,70);x.fillStyle='#FF8A5B';x.beginPath();x.moveTo(w*.48-4,h*.48);x.lineTo(w*.48+17,h*.28);x.lineTo(w*.48+38,h*.48);x.fill();
+      for(var r=0;r<3;r++)for(var c=0;c<9;c++){var cx=c*w/8+(r%2)*25,cy=h*.8+r*28;x.fillStyle='#3E9E4A';x.beginPath();x.arc(cx,cy,18,0,7);x.fill();x.fillStyle='#E23D3D';x.beginPath();x.arc(cx+6,cy-4,4,0,7);x.arc(cx-7,cy+3,4,0,7);x.fill();}});}});
+    var mt=[[-4,-9.5,4.2,8,'#2E8B3E'],[1.5,-10,5,9.5,'#3FA34D'],[6,-9,3.6,7,'#2E8B3E'],[-9.5,-4,4,7.5,'#3FA34D'],[-10,2.5,3.4,6,'#2E8B3E']];
+    mt.forEach(function(m){var c=new THREE.Mesh(new THREE.ConeGeometry(m[2],m[3],5),mat(m[4]));c.position.set(m[0],m[3]/2-1,m[1]);g.add(c);});
+    var mac=new THREE.Group();g.add(mac);mac.position.set(-3.3,0,-.6);mac.scale.setScalar(1.45);
+    cyl(mac,.05,.05,2.3,'#8A5A2E',0,0,0,8);cyl(mac,.35,.42,.12,'#8A5A2E',0,0,0,12);var bar=box(mac,.08,.08,1,'#8A5A2E',0,2.3,0);
+    var bird=new THREE.Group();bird.position.set(0,2.38,0);mac.add(bird);
+    var bdy=sph(bird,.28,'#E53935',0,.32,0);bdy.scale.set(.75,1.15,.8);
+    var hd=new THREE.Group();hd.position.set(0,.72,.05);bird.add(hd);
+    sph(hd,.2,'#E53935',0,0,0);var face=sph(hd,.09,'#FFFFFF',.12,.02,.12);face.scale.set(.6,1,.6);sph(hd,.03,'#111111',.16,.05,.15);
+    var bk=new THREE.Mesh(new THREE.ConeGeometry(.08,.2,8),mat('#F2E8D5'));bk.rotation.z=-PI/2-.5;bk.position.set(.22,-.05,0);hd.add(bk);
+    var wL=new THREE.Group();wL.position.set(0,.45,.2);bird.add(wL);var w1=sph(wL,.2,'#1E63D6',0,-.12,0);w1.scale.set(.6,1.3,.25);var w1b=sph(wL,.12,'#FFD23F',0,.06,0);w1b.scale.set(.6,.8,.3);
+    var wR=new THREE.Group();wR.position.set(0,.45,-.2);bird.add(wR);var w2=sph(wR,.2,'#1E63D6',0,-.12,0);w2.scale.set(.6,1.3,.25);var w2b=sph(wR,.12,'#FFD23F',0,.06,0);w2b.scale.set(.6,.8,.3);
+    var tail=box(bird,.12,.9,.14,'#1E63D6',-.12,-.75,0);tail.rotation.z=-.25;box(bird,.06,.5,.15,'#E53935',-.2,-.55,0).rotation.z=-.3;
+    var cap=new THREE.Mesh(new THREE.ConeGeometry(1.4,1.4,5),mat('#FFFFFF'));cap.position.set(1.5,7.6,-10);g.add(cap);
+    for(var i=0;i<7;i++){var bx=-6+i*1.6,bz=-6.4;var bu=sph(g,.45,'#3E9E4A',bx,.1,bz);bu.scale.set(1,.8,1);sph(g,.07,'#E23D3D',bx+.2,.4,bz+.3);sph(g,.07,'#E23D3D',bx-.2,.25,bz+.35);}
+    for(var j=0;j<5;j++){var cz=-5+j*1.8;var cb=sph(g,.45,'#3E9E4A',-6.4,.1,cz);cb.scale.set(1,.8,1);sph(g,.07,'#E23D3D',-6.1,.4,cz+.2);}
+    box(g,15,.3,3,'#8BC97A',0,-.7,-6.6);box(g,3,.3,12,'#8BC97A',-6.6,-.7,-1.5);
+    rug(g,-.6,1,2.6,'#FFD27A');
+    [[-3.8,'#38B2AC'],[.6,'#FF8A5B']].forEach(function(p){box(g,1.4,3,.1,p[1],p[0],0,-4.75);box(g,1.2,.12,.12,'#FFFFFF',p[0],1.5,-4.68);sph(g,.07,'#FFD23F',p[0]+.45,1.4,-4.66);});
+    box(g,3.2,1.8,.2,'#38B2AC',-1.6,0,-4.7);
+    box(g,3,.5,4,'#A85A30',-1.6,0,-2.8);box(g,2.8,.35,3.8,'#FFFFFF',-1.6,.5,-2.8);
+    ['#FF8A5B','#FFD27A','#38B2AC','#FF7AA2','#7FA8FF'].forEach(function(c,k){box(g,2.86,.14,.48,c,-1.6,.83,-1.1-k*.48);});
+    box(g,1.1,.26,.6,'#FFFFFF',-2.2,.85,-4.25);box(g,1.1,.26,.6,'#FFFFFF',-1,.85,-4.25);
+    onBack(g,2.4,.6,label('Casa Duque',{w:700,h:180,bg:'#38B2AC',fg:'#FFFFFF',font:'700 110px '+HAND,dy:6}),2.7,4.4);
+    box(g,1.8,1,.06,'#A85A30',2.7,2.6,-4.74);
+    for(var k=0;k<4;k++){plane(g,.32,.32,label(String(k+1),{w:128,h:128,bg:'#FFD27A',fg:'#1C2333',font:'800 80px '+DISP}),2.1+k*.4,3.3,-4.68);box(g,.08,.28,.04,mat('#D9A520',{metalness:.6,roughness:.3}),2.1+k*.4,2.75,-4.66);}
+    box(g,2.8,1.2,1,'#FF8A5B',2.7,0,-1.2);box(g,3,.1,1.2,'#FFFFFF',2.7,1.2,-1.2);
+    box(g,.1,.4,.1,'#2B2B2B',3.2,1.3,-1.45);box(g,.9,.6,.08,'#1F2326',3.2,1.6,-1.5);var mon=box(g,.8,.5,.03,glow('#7CC4E8',.5),3.2,1.65,-1.45);
+    sph(g,.14,mat('#E3B23C',{metalness:.6,roughness:.3}),2.1,1.38,-1);
+    box(g,.9,1,.6,'#D8B07E',3.6,0,1.8);plane(g,.8,.5,label('Café de Jardín',{w:400,h:220,bg:'#D8B07E',fg:'#6B3A12',font:'700 70px '+HAND}),3.6,.6,2.11);
+    var h1=flowers(g,-4.4,1.3,.6,'#FF7AA2','#FFFFFF',.8),h2=flowers(g,-4.4,1.3,2.6,'#FFD23F','#38B2AC',.8);
+    var lv=bigPlant(g,4.2,0,-4.2,1,'#38B2AC');flowers(g,-.2,0,3.6,'#FF8A5B','#FFFFFF',1.1);
+    var chans=[['B','#3D7DFF'],['A','#FF6B6B'],['E','#FFB547'],['G','#3CC48A'],['G','#E8442E']];
+    var cards=chans.map(function(p,k){var m=plane(g,.7,.7,label(p[0],{w:128,h:128,bg:p[1],fg:'#FFFFFF',font:'800 86px '+DISP,lit:.4}),1.4+k*.62,3.6,-1.2);m.material.side=THREE.DoubleSide;return m;});
+    return function(t){cards.forEach(function(c,k){c.position.y=3.6+Math.sin(t*1.6+k*1.1)*.28;c.rotation.y=Math.sin(t*.8+k)*.35;});
+      var fl=Math.max(0,Math.sin(t*2.2));wL.rotation.x=-fl*.9*Math.max(0,Math.sin(t*9));wR.rotation.x=fl*.9*Math.max(0,Math.sin(t*9));hd.rotation.y=Math.sin(t*.9)*.6;hd.rotation.z=Math.sin(t*1.7)*.12;bird.rotation.y=-.6+Math.sin(t*.4)*.3;
+      h1.concat(h2).forEach(function(h,k){h.rotation.z=Math.sin(t*1.3+k)*.08;});lv.forEach(function(l,k){l.rotation.x=Math.sin(t*1.1+k)*.05;});
+      mon.material.emissiveIntensity=.4+.2*Math.sin(t*3);g.rotation.y=Math.sin(t*.25)*.035;};
+  },{wz:1.6,f:8,look:2.6});
+
+  /* 3 WORKSHOP: bright garage, EV on the lift, engine stand */
+  make('c-shop',function(g){
+    room(g,{back:'#E4F1FF',left:'#9CCBFF',floor:'#B9C3CC',trim:'#1D2B45',wz:-1.2,ww:2.6});
+    box(g,10,.02,.3,'#FFD23F',.2,0,1.8);box(g,.3,.02,10,'#FFD23F',1.8,0,.2);
+    box(g,3,1.6,.06,'#FF8A5B',-1.8,2.6,-4.76);
+    [['#1D2B45',.2,.9],['#FFFFFF',.12,1.1],['#1D2B45',.16,.7],['#FFFFFF',.14,1],['#1D2B45',.1,.8]].forEach(function(p,k){box(g,p[1],p[2],.06,p[0],-2.9+k*.55,2.85,-4.7);});
+    onBack(g,2.4,.62,label('E-Mobilität',{w:620,h:160,bg:'#FFD23F',fg:'#1D2B45',font:'800 92px '+DISP}),2.4,4.9);
+    [-2.6,2.6].forEach(function(x){box(g,.4,4,.4,'#FF6B2C',x,0,-3);box(g,.7,.2,.7,'#1D2B45',x,0,-3);});
+    box(g,5.6,.2,.4,'#FF6B2C',0,4,-3);
+    var car=new THREE.Group();g.add(car);car.position.set(0,.3,-1.5);
+    box(car,4.4,.14,.24,'#3D454C',0,0,.55);box(car,4.4,.14,.24,'#3D454C',0,0,-.55);
+    box(car,4.2,.8,1.9,'#FFFFFF',0,.4,0);box(car,2.4,.66,1.74,'#28456B',-.2,1.2,0);box(car,2.2,.1,1.78,'#FFFFFF',-.2,1.86,0);
+    box(car,4.22,.12,1.92,'#4FC3FF',0,.68,0);
+    box(car,.06,.12,1.4,glow('#E8FBFF',1),2.11,.95,0);box(car,.06,.12,1.4,glow('#FF3B30',.8),-2.11,.95,0);
+    var port=box(car,.3,.24,.04,glow('#00E0C6',1),-1.5,.9,.97);
+    var wheels=[];[[1.35,.98],[1.35,-.98],[-1.35,.98],[-1.35,-.98]].forEach(function(p){
+      var w=new THREE.Group();w.position.set(p[0],.42,p[1]);car.add(w);
+      var tire=new THREE.Mesh(new THREE.CylinderGeometry(.44,.44,.32,18),mat('#1E1E1E'));tire.rotation.x=PI/2;tire.castShadow=true;w.add(tire);
+      var hb=new THREE.Mesh(new THREE.BoxGeometry(.55,.14,.36),mat('#4FC3FF',{metalness:.3}));w.add(hb);wheels.push(w);});
+    box(g,.7,1,.25,'#1D2B45',-4.6,1.4,2.4);var wb=box(g,.04,.12,.4,glow('#00E0C6',1),-4.46,2.1,2.4);
+    var eng=new THREE.Group();g.add(eng);eng.position.set(-3,0,3);
+    [[-.45,-.3],[.45,-.3],[-.45,.3],[.45,.3]].forEach(function(p){box(eng,.08,.9,.08,'#1D2B45',p[0],0,p[1]);});
+    box(eng,1.3,.8,.8,'#E8442E',0,.9,0);box(eng,1.1,.12,.9,'#B5301E',0,1.7,0);
+    var pist=[];for(var i=0;i<4;i++){pist.push(cyl(eng,.12,.12,.4,'#D7DCE1',-.45+i*.3,1.6,0,12));}
+    box(g,1.3,1.5,.8,'#FF6B2C',3.7,0,-4.3);for(var k=0;k<4;k++)box(g,1.1,.04,.02,'#1D2B45',3.7,.3+k*.32,-3.88);
+    box(g,.9,.6,.7,'#D8B07E',3.6,1.5,-4.3);plane(g,.8,.3,label('KlarFahrt',{w:400,h:150,bg:'#D8B07E',fg:'#14213D',font:'800 70px '+DISP}),3.6,1.8,-3.94);
+    for(var n=0;n<3;n++){var tr=new THREE.Mesh(new THREE.TorusGeometry(.48,.2,10,22),mat('#1E1E1E'));tr.rotation.x=PI/2;tr.position.set(3.4,.2+n*.4,2.4);tr.castShadow=true;g.add(tr);}
+    var lv=bigPlant(g,-4.2,0,-4.2,1,'#FF8A5B');
+    return function(t){var up=(Math.sin(t*.55)*.5+.5);car.position.y=.3+up*1.4;
+      wheels.forEach(function(w){w.rotation.z=-t*2.5;});var pulse=.5+.5*Math.sin(t*4);port.material.emissiveIntensity=.3+pulse;wb.material.emissiveIntensity=.3+pulse;
+      pist.forEach(function(p,k){p.position.y=1.8+Math.sin(t*6+(k%2?PI:0)+(k>1?PI/2:0))*.14;});lv.forEach(function(l,k){l.rotation.x=Math.sin(t*1.1+k)*.05;});g.rotation.y=Math.sin(t*.25)*.035;};
+  },{wz:-1.2});
+
+  /* 4 CAFE: sunny restaurant */
+  make('c-cafe',function(g){
+    room(g,{back:'#BFEAD0',left:'#FFE3A8',floor:'#C98A52',trim:'#FFFFFF',wz:1.2,ww:3.6});
+    box(g,.9,.1,3.8,'#B07A4A',-4.35,1.9,1.2);
+    [0,1.4,2.8].forEach(function(z){cyl(g,.05,.05,1.5,'#8A5A2E',-3.4,0,-.2+z,8);cyl(g,.3,.3,.1,'#FF8A5B',-3.4,1.5,-.2+z,14);});
+    box(g,3.6,1.3,1.1,'#FF9A7A',-.6,0,-2.4);box(g,3.8,.12,1.3,'#FFF6E8',-.6,1.3,-2.4);
+    for(var i=0;i<12;i++)box(g,.12,1.2,.06,i%2?'#FFB39C':'#F2836A',-2.25+i*.3,.05,-1.82);
+    var glass=mat('#E8F8FF',{transparent:true,opacity:.35,roughness:.1});
+    box(g,1.6,.6,.9,glass,-1.4,1.42,-2.4);
+    ['#FFD27A','#F2D38B','#B07A4A'].forEach(function(c,k){cyl(g,.18,.18,.16,c,-1.9+k*.5,1.45,-2.4,14);});
+    box(g,.9,.8,.7,'#D7DCE1',.6,1.42,-2.6);box(g,.7,.12,.3,'#2B2B2B',.6,1.62,-2.2);cyl(g,.1,.08,.18,'#FFFFFF',.6,1.45,-2.15,10);
+    var steam=[];for(var k=0;k<5;k++){var st=sph(g,.1,mat('#FFFFFF',{transparent:true,opacity:.6}),.6,1.7,-2.15);st.castShadow=false;steam.push(st);}
+    onBack(g,3,1.2,tex(640,256,function(x,w,h){x.fillStyle='#1F2E24';x.fillRect(0,0,w,h);x.strokeStyle='#B07A4A';x.lineWidth=18;x.strokeRect(0,0,w,h);
+      x.fillStyle='#F6F2E8';x.textAlign='center';x.font='700 84px '+HAND;x.fillText('El Bodegón',w/2,100);x.font='600 48px '+HAND;x.fillStyle='#FFD66B';x.fillText('Arepas · Café · Empanadas',w/2,180);}),-.6,3.5);
+    var flags=[];var cols=['#FCD116','#3D7DFF','#FF6B6B'];
+    for(var f=0;f<9;f++){var fl=new THREE.Mesh(new THREE.ConeGeometry(.2,.4,3),mat(cols[f%3]));fl.rotation.z=PI;fl.position.set(-3.8+f*.95,5.1,-4.6);fl.castShadow=true;g.add(fl);flags.push(fl);}
+    box(g,9,.02,.02,'#1B1B1B',.2,5.32,-4.6);
+    var bulbs=[];for(var b=0;b<4;b++){var grp=new THREE.Group();grp.position.set(-3.4,6,-.2+b*1.1);g.add(grp);
+      var cord=new THREE.Mesh(new THREE.CylinderGeometry(.015,.015,1.4,6),mat('#2B2B2B'));cord.position.y=-.7;grp.add(cord);
+      var bl=new THREE.Mesh(new THREE.IcosahedronGeometry(.14,1),glow('#FFD58A',1));bl.position.y=-1.45;grp.add(bl);bulbs.push(grp);}
+    cyl(g,.75,.75,.08,'#FFFFFF',2.4,1.15,1.6,20);cyl(g,.06,.06,1.15,'#8A5A2E',2.4,0,1.6,8);cyl(g,.1,.08,.14,'#FF8A5B',2.3,1.23,1.5,10);
+    var h1=flowers(g,2.6,1.19,1.8,'#FF7AA2','#FFFFFF',.5);
+    box(g,1,.5,1,'#7FB8FF',2.6,0,3.2);box(g,1,.9,.2,'#7FB8FF',2.6,.5,3.7);
+    var lv=bigPlant(g,3.9,0,-4.1,1.1,'#FFFFFF');var h2=flowers(g,-4.4,1.95,3,'#FFD23F','#FF9A7A',.6);
+    return function(t){steam.forEach(function(s,k){var p=((t*.6)+k/5)%1;s.position.y=1.75+p*1.2;s.position.x=.6+Math.sin(p*6+k)*.08;var sc=.6+p*1.2;s.scale.set(sc,sc,sc);s.material.opacity=.55*(1-p);});
+      bulbs.forEach(function(b,k){b.rotation.x=Math.sin(t*1.2+k)*.06;});flags.forEach(function(f,k){f.rotation.x=Math.sin(t*2+k*.7)*.15;});
+      h1.concat(h2).forEach(function(h,k){h.rotation.z=Math.sin(t*1.3+k)*.08;});lv.forEach(function(l,k){l.rotation.x=Math.sin(t*1.1+k)*.05;});g.rotation.y=Math.sin(t*.25)*.035;};
+  },{wz:1.2});
+
+  /* 5 SCHOOL: Studienkolleg — chalkboard with real exam topics */
+  make('c-school',function(g){
+    room(g,{back:'#CFC4FF',left:'#E9E3FF',floor:'#C99A6A',trim:'#FFFFFF',wz:-2.4,ww:2.4});
+    rug(g,.8,1,2.4,'#FF9AB8');
+    box(g,4.8,2.6,.12,'#B07A4A',-.4,1.8,-4.78);
+    onBack(g,4.5,2.3,tex(900,460,function(x,w,h){x.fillStyle='#2C5244';x.fillRect(0,0,w,h);x.fillStyle='#F6F2E8';x.textAlign='left';
+      x.font='700 64px '+HAND;x.fillText('Feststellungsprüfung',36,78);
+      x.font='600 44px '+HAND;x.fillText('F = q · v · B',40,160);x.fillText('Gauß-Verfahren:',40,232);
+      x.font='600 36px '+MONO;x.fillText('| 2  1 -1 |  8',60,290);x.fillText('|-3 -1  2 | -11',60,334);x.fillText('|-2  1  2 | -3',60,378);
+      x.fillStyle='#FFD66B';x.font='700 52px '+HAND;x.fillText('Deutsch B2 → C1',520,190);
+      x.strokeStyle='#F6F2E8';x.lineWidth=4;x.beginPath();for(var i=0;i<=120;i++){var px=520+i*2.8,py=330-Math.sin(i/12)*50;i?x.lineTo(px,py):x.moveTo(px,py);}x.stroke();}),-.4,3.1);
+    var chalk=box(g,.18,.06,.06,'#FFFFFF',-1,1.82,-4.6);
+    box(g,2.6,.1,1.3,'#FFFFFF',1.6,1.4,0);legs(g,2.6,1.3,1.4,'#9C8CF0',1.6,0);
+    ['#FF6B6B','#7FA8FF','#FFD27A'].forEach(function(c,k){box(g,.9-k*.08,.16,.6,c,1,1.5+k*.16,-.1);});
+    box(g,.9,.04,.6,'#FFFFFF',2.1,1.5,.2);
+    cyl(g,.14,.18,.08,'#2B2B2B',2.6,1.5,-.4,12);cyl(g,.03,.03,.7,'#2B2B2B',2.6,1.58,-.4,6);var lamp=cyl(g,.08,.24,.22,glow('#FFE1A8',.8),2.5,2.2,-.3,12);
+    box(g,.9,.12,.9,'#FF9AB8',1.6,.85,1.2);box(g,.9,.9,.12,'#FF9AB8',1.6,.95,1.6);
+    var bk=new THREE.Group();g.add(bk);bk.position.set(-4.4,0,2);box(bk,.8,3.6,2.6,'#FFFFFF',0,0,0);
+    for(var r=0;r<4;r++)for(var b=0;b<6;b++)box(bk,.5,.55,.24,['#FF6B6B','#7FA8FF','#FFD27A','#6FD39A','#FF9A7A'][(r+b)%5],.2,.25+r*.85,-1+b*.36);
+    onLeft(g,1.6,.5,label('Mettingen',{w:480,h:150,bg:'#FFD27A',fg:'#5038D9',font:'800 80px '+DISP}),2,4.3);
+    cyl(g,.3,.4,.15,'#5038D9',3.6,0,-3.6,12);cyl(g,.05,.05,1,'#5038D9',3.6,.15,-3.6,6);
+    var globe=sph(g,.55,mat('#5AA9FF'),3.6,1.7,-3.6);var land=sph(g,.565,mat('#6FD39A'),3.6,1.7,-3.6);land.scale.set(.55,.9,.35);
+    var h1=flowers(g,-4.4,1.3,-1.6,'#FF7AA2','#FFFFFF',.7),h2=flowers(g,-4.4,1.3,-3.2,'#FFD23F','#CFC4FF',.7);
+    return function(t){chalk.position.x=-2+((t*.35)%1)*3.2;chalk.position.y=1.85+Math.abs(Math.sin(t*3))*.04;
+      globe.rotation.y=t*.6;land.rotation.y=t*.6;lamp.material.emissiveIntensity=.7+.15*Math.sin(t*2);
+      h1.concat(h2).forEach(function(h,k){h.rotation.z=Math.sin(t*1.3+k)*.08;});g.rotation.y=Math.sin(t*.25)*.035;};
+  },{wz:-2.4});
+
+  /* 6 ROBOTICS ARENA: podium, robot champion, giant gold medal, confetti */
+  make('c-lab',function(g){
+    room(g,{back:'#FFC9A8',left:'#BFE0FF',floor:'#2C3F6B',trim:'#FFFFFF',wz:2,ww:2.4});
+    var line=mat('#FFFFFF');[[0,.01,.6,7,.08],[0,.01,4,7,.08]].forEach(function(l){box(g,l[3],l[2]===.6?.02:.02,l[4],line,l[0],l[1],l[2]);});
+    box(g,.08,.02,3.4,line,-3.5,.01,2.3);box(g,.08,.02,3.4,line,3.5,.01,2.3);
+    onBack(g,4.4,1,label('IYRC 2023 · 1. Platz',{w:1000,h:230,bg:'#1D2B45',fg:'#FFD23F',font:'800 108px '+DISP}),.2,5.1);
+    var pd=[[-1.6,1.2,'#C9D6E6','2'],[0,1.9,'#FFD23F','1'],[1.6,.8,'#FF9A7A','3']];
+    pd.forEach(function(p){box(g,1.5,p[1],1.5,p[2],p[0],0,-3);plane(g,.7,.7,label(p[3],{w:128,h:128,bg:p[2],fg:'#1D2B45',font:'800 96px '+DISP}),p[0],p[1]*.55,-2.24);});
+    var champ=new THREE.Group();g.add(champ);champ.position.set(0,1.9,-3);
+    box(champ,.8,.9,.6,'#3D7DFF',0,0,0);box(champ,.65,.55,.55,'#FFFFFF',0,.95,0);
+    var eyes=[box(champ,.12,.12,.03,glow('#00E5FF',1.2),.14,1.2,.28),box(champ,.12,.12,.03,glow('#00E5FF',1.2),-.14,1.2,.28)];
+    cyl(champ,.02,.02,.35,'#2B2B2B',0,1.5,0,6);var bulb=sph(champ,.08,glow('#FF4D4D',1),0,1.9,0);
+    var armL=new THREE.Group();armL.position.set(-.48,.8,0);champ.add(armL);box(armL,.16,.7,.16,'#3D7DFF',0,-.7,0);
+    var armR=new THREE.Group();armR.position.set(.48,.8,0);champ.add(armR);box(armR,.16,.7,.16,'#3D7DFF',0,0,0);
+    box(champ,.55,.1,.04,'#E8442E',0,.72,.31);var mini=cyl(champ,.13,.13,.04,mat('#FFD23F',{metalness:.7,roughness:.25}),0,.48,.32,16);mini.rotation.x=PI/2;
+    var medal=new THREE.Group();g.add(medal);medal.position.set(-2.8,4.3,-4.3);
+    var rib1=box(medal,.25,1.2,.04,'#E8442E',-.22,0,0);rib1.rotation.z=.25;var rib2=box(medal,.25,1.2,.04,'#3D7DFF',.22,0,0);rib2.rotation.z=-.25;
+    var face=tex(256,256,function(x,w,h){var gr=x.createRadialGradient(90,80,10,128,128,128);gr.addColorStop(0,'#FFF3A8');gr.addColorStop(.6,'#F2B705');gr.addColorStop(1,'#B88300');x.fillStyle=gr;x.fillRect(0,0,w,h);
+      x.fillStyle='#6B4A00';x.font='800 150px '+DISP;x.textAlign='center';x.textBaseline='middle';x.fillText('1',w/2,h/2+8);});
+    var gold=mat('#F2B705',{metalness:.7,roughness:.25});
+    var disc=new THREE.Mesh(new THREE.CylinderGeometry(.62,.62,.12,32),[gold,face,face]);disc.rotation.x=PI/2;disc.position.y=-.55;disc.castShadow=true;medal.add(disc);
+    var bot=new THREE.Group();g.add(bot);
+    box(bot,.7,.32,.5,'#FF6B2C',0,.12,0);box(bot,.4,.3,.35,'#FFFFFF',0,.44,0);var be=box(bot,.24,.06,.03,glow('#00E5FF',1),0,.6,.18);
+    var bw=[];[[.26,.27],[-.26,.27],[.26,-.27],[-.26,-.27]].forEach(function(p){var w=new THREE.Mesh(new THREE.CylinderGeometry(.12,.12,.08,14),mat('#222'));w.rotation.x=PI/2;w.position.set(p[0],.12,p[1]);bot.add(w);bw.push(w);});
+    var spots=[];[[-4,5.6,-1],[4,5.6,-1]].forEach(function(p){var c=new THREE.Mesh(new THREE.ConeGeometry(1.1,4.4,24,1,true),new THREE.MeshBasicMaterial({color:'#FFF2B0',transparent:true,opacity:.14,depthWrite:false,side:THREE.DoubleSide}));
+      c.position.set(p[0]*.5,3.6,-2.2);c.lookAt(p[0],p[1]+2,p[2]);c.rotateX(PI/2);g.add(c);spots.push(c);cyl(g,.25,.3,.4,'#1D2B45',p[0],p[1],p[2],12);});
+    var conf=[],ccols=['#FF6B6B','#FFD23F','#3D7DFF','#6FD39A','#FF9AB8','#FFFFFF'];
+    for(var i=0;i<60;i++){var cf=new THREE.Mesh(new THREE.PlaneGeometry(.14,.09),new THREE.MeshStandardMaterial({color:ccols[i%6],side:THREE.DoubleSide,roughness:.6}));
+      cf.userData={x:-3+rnd()*6,z:-4.2+rnd()*4,o:rnd(),s:.6+rnd()*.6,r:rnd()*6};g.add(cf);conf.push(cf);}
+    var h1=flowers(g,-4.4,1.3,1.2,'#FF7AA2','#FFFFFF',.7),h2=flowers(g,-4.4,1.3,2.8,'#FFD23F','#FFC9A8',.7);
+    return function(t){var u=(t*.12)%1,px,pz;var per=u*4;
+      if(per<1){px=-3+per*6;pz=.6;}else if(per<2){px=3;pz=.6+(per-1)*3.4;}else if(per<3){px=3-(per-2)*6;pz=4;}else{px=-3;pz=4-(per-3)*3.4;}
+      bot.position.set(px*1.17,0,pz);bot.rotation.y=per<1?PI/2:per<2?0:per<3?-PI/2:PI;bw.forEach(function(w){w.rotation.y=t*5;});be.material.emissiveIntensity=.5+.5*Math.sin(t*6);
+      armR.rotation.z=-.5+Math.sin(t*5)*.4;armL.rotation.z=Math.sin(t*2)*.1;champ.rotation.y=Math.sin(t*.8)*.35;champ.position.y=1.9+Math.abs(Math.sin(t*2.5))*.08;
+      var bl=(t%3)>2.85;eyes.forEach(function(e){e.scale.y=bl?.15:1;});bulb.material.emissiveIntensity=.6+.5*Math.sin(t*4);
+      medal.rotation.z=Math.sin(t*1.1)*.12;medal.rotation.y=Math.sin(t*.9)*.5;
+      conf.forEach(function(c){var d=c.userData,p=(t*.18*d.s+d.o)%1;c.position.set(d.x+Math.sin(t*1.5+d.r)*.2,5.5-p*5.4,d.z);c.rotation.set(t*3*d.s+d.r,t*2+d.r,0);});
+      spots.forEach(function(s,k){s.material.opacity=.12+.05*Math.sin(t*2+k);});
+      h1.concat(h2).forEach(function(h,k){h.rotation.z=Math.sin(t*1.3+k)*.08;});g.rotation.y=Math.sin(t*.25)*.035;};
+  },{wz:2});
+
+  if(!reduce){var t0=performance.now();(function loop(now){var t=(now-t0)/1000;
+    all.forEach(function(o){if(o.vis){o.tick(t);o.r.render(o.s,o.cam);}});requestAnimationFrame(loop);})(t0);}
+  }
+  var ready=(document.fonts&&document.fonts.ready)?document.fonts.ready:Promise.resolve();
+  var started=false;function go(){if(started)return;started=true;start();}
+  ready.then(go,go);setTimeout(go,1500);
+})();
+</script>
+
+</body>
+</html>
